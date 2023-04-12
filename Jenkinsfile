@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent 'blackduck'
   stages {
     stage('version') {
       steps {
