@@ -7,7 +7,7 @@ pipeline {
       steps {
         script{
                    dir("${env.WORKSPACE}") {
-		bat 'python3 --version'
+		bat 'python --version'
               }
              }
       }
@@ -16,7 +16,7 @@ pipeline {
       steps {
        script{
                    dir("${env.WORKSPACE}") {
-		bat 'python3 test.py'
+		bat 'python test.py'
               }
              }
       }
