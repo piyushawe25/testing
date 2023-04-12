@@ -7,9 +7,6 @@ pipeline {
     PATH = "C:\\WINDOWS\\SYSTEM32"
 
 }
-	tools {
-		python 'python-3.11.3'
-	}
   stages {
     stage('version') {
       steps {
