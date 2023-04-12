@@ -2,12 +2,17 @@ pipeline {
   agent { 
 		label 'blackduck' 
 	}
+  environment {
+
+    PATH = "C:\\WINDOWS\\SYSTEM32"
+
+}
   stages {
     stage('version') {
       steps {
         script{
                    dir("${env.WORKSPACE}") {
-		bat 'test.bat'
+		bat 'python3 --version'
               }
              }
       }
@@ -16,7 +21,7 @@ pipeline {
       steps {
        script{
                    dir("${env.WORKSPACE}") {
-		bat 'test.bat'
+		bat 'python3 test.py'
               }
              }
       }
