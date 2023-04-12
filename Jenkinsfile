@@ -3,7 +3,7 @@ pipeline {
 		label 'blackduck' 
 	}
   stages {
-    stage('version') {
+    stage('versionsss') {
       steps {
 	      script{
                    dir("${env.WORKSPACE}") {
