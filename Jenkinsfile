@@ -2,7 +2,11 @@ pipeline {
   agent { 
 		label 'blackduck' 
 	}
-  
+  environment {
+
+    PATH = "C:\\WINDOWS\\SYSTEM32"
+
+}
   stages {
     stage('version') {
       steps {
