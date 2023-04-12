@@ -5,20 +5,21 @@ pipeline {
   stages {
     stage('version') {
       steps {
-        script{
+	      script{
                    dir("${env.WORKSPACE}") {
-		sh "python3 --version"
-              }
-             }
+			bat "python3 --version"
+		}
+               }
+	      
       }
     }
     stage('hello') {
       steps {
-       script{
+	      script{
                    dir("${env.WORKSPACE}") {
-		sh "python3 test.py"
-              }
-             }
+			 bat "python3 test.py"
+		}
+               }
       }
     }
   }
