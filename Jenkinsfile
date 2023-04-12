@@ -1,5 +1,7 @@
 pipeline {
-  agent 'blackduck'
+  agent { 
+		label 'blackduck' 
+	}
   stages {
     stage('version') {
       steps {
